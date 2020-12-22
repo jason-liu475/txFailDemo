@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.liu.demo.dao.mapper.FundSuspendMapper">
+
+	<insert id="insert" parameterType="org.study.liu.demo.dao.model.FundSuspendModel">
+		insert into fund_suspend
+		(fund_code,fund_name,suspend_date,open_date,create_time,update_time,batch_num,suspend_type)
+		values
+		(#{fundCode,jdbcType=VARCHAR},#{fundName,jdbcType=VARCHAR},#{suspendDate,jdbcType=VARCHAR},
+		#{openDate,jdbcType=VARCHAR},#{createTime,jdbcType=TIMESTAMP},#{updateTime,jdbcType=TIMESTAMP},
+		#{batchNum,jdbcType=VARCHAR},#{suspendType,jdbcType=INTEGER})
+	</insert>
+</mapper>
